@@ -1,6 +1,4 @@
 <body>
-sendSameSiteNone: <span id="result"></span>
-
 <script>
     function intToString(intValue) {
         return String(intValue);
@@ -123,10 +121,12 @@ sendSameSiteNone: <span id="result"></span>
     }
 
     var sendSameSiteNone = isSameSiteNoneCompatible(navigator.userAgent);
-    // alert("sendSameSiteNone" + sendSameSiteNone);
-    //document.getElementById('result').innerHTML = sendSameSiteNone;
-    // document.cookie="thirdparty=yes; Max-Age=3600; SameSite=None; Secure";
-    // document.location="complete.html";
+    if (sendSameSiteNone) {
+      document.cookie="thirdparty=yes; Max-Age=3600; SameSite=None; Secure";
+    } else {
+      document.cookie="thirdparty=yes; Max-Age=3600; Secure";
+    }
     console.log("sendSameSiteNone", sendSameSiteNone);
+    document.location="complete.html";
 </script>
 </body>

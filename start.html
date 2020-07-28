@@ -1,5 +1,5 @@
 <body>
-sendSameSiteNone <span id="result"></span>
+sendSameSiteNone: <span id="result"></span>
 
 <script>
     function intToString(intValue) {
@@ -124,7 +124,7 @@ sendSameSiteNone <span id="result"></span>
 
     var sendSameSiteNone = isSameSiteNoneCompatible(navigator.userAgent);
     // alert("sendSameSiteNone" + sendSameSiteNone);
-    document.getElementById('result').innerHTML = sendSameSiteNone;
+    //document.getElementById('result').innerHTML = sendSameSiteNone;
     // document.cookie="thirdparty=yes; Max-Age=3600; SameSite=None; Secure";
     // document.location="complete.html";
     console.log("sendSameSiteNone", sendSameSiteNone);

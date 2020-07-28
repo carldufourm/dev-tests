@@ -122,8 +122,10 @@
 
     var sendSameSiteNone = isSameSiteNoneCompatible(navigator.userAgent);
     alert("sendSameSiteNone" + sendSameSiteNone);
-    
-    document.cookie="thirdparty=yes; Max-Age=3600; SameSite=None; Secure";
-    document.location="complete.html";
+    document.getElementById('result').innerHTML = sendSameSiteNone;
+    // document.cookie="thirdparty=yes; Max-Age=3600; SameSite=None; Secure";
+    // document.location="complete.html";
+
 </script>
+sendSameSiteNone <span id="result"></span>
 </body>

@@ -1,4 +1,6 @@
 <body>
+sendSameSiteNone <span id="result"></span>
+
 <script>
     function intToString(intValue) {
         return String(intValue);
@@ -121,11 +123,10 @@
     }
 
     var sendSameSiteNone = isSameSiteNoneCompatible(navigator.userAgent);
-    alert("sendSameSiteNone" + sendSameSiteNone);
+    // alert("sendSameSiteNone" + sendSameSiteNone);
     document.getElementById('result').innerHTML = sendSameSiteNone;
     // document.cookie="thirdparty=yes; Max-Age=3600; SameSite=None; Secure";
     // document.location="complete.html";
-
+    console.log("sendSameSiteNone", sendSameSiteNone);
 </script>
-sendSameSiteNone <span id="result"></span>
 </body>
